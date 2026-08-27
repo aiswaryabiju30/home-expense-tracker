@@ -40,7 +40,7 @@ export default function Login({ onLogin }) {
     <div
   className="min-h-screen w-full flex items-center justify-center p-4 bg-cover bg-center"
   style={{
-    backgroundImage: `linear-gradient(rgba(251,246,238,0.45), rgba(251,246,238,0.45)), url(${loginBg})`
+    backgroundImage: `linear-gradient(rgba(251,246,238,0.55), rgba(251,246,238,0.55)), url(${loginBg})`
   }}
 >
       <div className="w-full max-w-sm bg-white rounded-xl shadow-md p-6">
@@ -68,7 +68,7 @@ export default function Login({ onLogin }) {
               onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
               placeholder="Name"
               required
-              className="w-full text-[13px] bg-white border border-gray-200 rounded-lg px-3 py-2.5"
+              className="w-full text-[13px] bg-[#FFF8EE] border border-gray-200 rounded-lg px-3 py-2.5"
             />
           )}
           <input
@@ -77,7 +77,7 @@ export default function Login({ onLogin }) {
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
             placeholder="Email"
             required
-            className="w-full text-[13px] bg-white border border-gray-200 rounded-lg px-3 py-2.5"
+            className="w-full text-[13px] bg-[#FFF8EE] border border-gray-200 rounded-lg px-3 py-2.5"
           />
           <input
             type="password"
@@ -85,7 +85,7 @@ export default function Login({ onLogin }) {
             onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
             placeholder="Password"
             required
-            className="w-full text-[13px] bg-white border border-gray-200 rounded-lg px-3 py-2.5"
+            className="w-full text-[13px] bg-[#FFF8EE] border border-gray-200 rounded-lg px-3 py-2.5"
           />
           <button
             type="submit"
