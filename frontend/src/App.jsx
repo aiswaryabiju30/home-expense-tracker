@@ -141,7 +141,7 @@ export default function App() {
 
   useEffect(() => {
     if (!token) return;
-    axios.get("http://127.0.0.1:5000/api/expenses", {
+    axios.get("https://home-expense-tracker-pfx6.onrender.com/api/expenses", {
       headers: { Authorization: `Bearer ${token}` },
     }).then((res) => {
       const data = res.data;
@@ -171,7 +171,7 @@ export default function App() {
     if (!amt || amt <= 0) return;
     const catLabel = CATS.find((c) => c.key === form.cat).label;
     try {
-      await axios.post("http://127.0.0.1:5000/api/expenses", {
+      await axios.post("https://home-expense-tracker-pfx6.onrender.com/api/expenses", {
         amount: amt,
         category: catLabel,
         description: form.note,

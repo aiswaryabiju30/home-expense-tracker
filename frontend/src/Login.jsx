@@ -15,15 +15,15 @@ export default function Login({ onLogin }) {
     setLoading(true);
     try {
       if (isRegister) {
-        await axios.post("http://127.0.0.1:5000/api/register", form);
+        await axios.post("https://home-expense-tracker-pfx6.onrender.com/api/register", form);
         // after registering, log them in automatically
-        const res = await axios.post("http://127.0.0.1:5000/api/login", {
+        const res = await axios.post("https://home-expense-tracker-pfx6.onrender.com/api/login", {
           email: form.email,
           password: form.password,
         });
         onLogin(res.data.access_token, res.data.name);
       } else {
-        const res = await axios.post("http://127.0.0.1:5000/api/login", {
+        const res = await axios.post("https://home-expense-tracker-pfx6.onrender.com/api/login", {
           email: form.email,
           password: form.password,
         });

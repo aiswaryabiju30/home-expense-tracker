@@ -33,7 +33,7 @@ venv\Scripts\activate
 pip install flask flask-sqlalchemy flask-jwt-extended flask-cors
 python app.py
 
-Backend runs on http://127.0.0.1:5000
+Backend runs on https://home-expense-tracker-pfx6.onrender.com
 
 ### Frontend
 cd frontend
