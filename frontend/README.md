@@ -1,16 +1,67 @@
-# React + Vite
+# 🏠 Home Ledger — Smart Home Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack web application that helps guardians and households track monthly expenses, set category-wise budgets, and visualize spending trends — built with React, Flask, and SQLite.
 
-Currently, two official plugins are available:
+## 📸 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Home Ledger is a personal finance dashboard designed for home/family expense management. Users can register, log in securely, add expenses under categories like Groceries, Rent, School Fees, Medical, and more, and instantly see budget progress, spending trends, and simple predictive insights.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔐 Secure Authentication — JWT-based register and login system
+- 💰 Expense Tracking — Add, view expenses by category with real-time budget updates
+- 📊 Data Visualization — Interactive donut chart (category breakdown) and 6-month trend bar chart using Recharts
+- 🎯 Budget Monitoring — Category-wise budget cards with progress bars and over-budget alerts
+- 📈 Spending Prediction — Simple trend-based prediction for next month's expenses
+- 🎨 Custom UI Design — Warm, ledger-inspired design with Tailwind CSS, custom illustrations, and a "receipt stub" category card design
+- 📱 Responsive Layout — Works across desktop and mobile screens
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Frontend: React (Vite), Tailwind CSS, Recharts, Lucide React, Axios
+
+Backend: Python Flask, Flask-SQLAlchemy, Flask-JWT-Extended, Flask-CORS
+
+Database: SQLite
+
+## ⚙️ Setup & Installation
+
+### Backend
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install flask flask-sqlalchemy flask-jwt-extended flask-cors
+python app.py
+
+Backend runs on http://127.0.0.1:5000
+
+### Frontend
+cd frontend
+npm install
+npm run dev
+
+Frontend runs on http://localhost:5173
+
+## 🔑 API Endpoints
+
+POST /api/register — Register a new user
+POST /api/login — Log in and receive JWT token
+GET /api/expenses — Get all expenses for logged-in user
+POST /api/expenses — Add a new expense
+PUT /api/expenses/<id> — Update an expense
+DELETE /api/expenses/<id> — Delete an expense
+
+## 🚀 Future Improvements
+
+- Deploy live version (Render + Vercel)
+- Multi-member household expense tracking
+- PDF report export
+- Password reset functionality
+
+## 👩‍💻 Author
+
+Aiswarya Biju
+B.Tech in Artificial Intelligence and Machine Learning
+GitHub: https://github.com/aiswaryabiju30
+
+Built as a portfolio project to demonstrate full-stack development skills including authentication, REST APIs, database design, and modern UI/UX.
