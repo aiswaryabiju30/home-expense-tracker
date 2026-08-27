@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
@@ -24,5 +25,6 @@ def home():
 
 if __name__ == '__main__':
     with app.app_context():
-        db.create_all()   # creates the .db file and tables
-    app.run(debug=True)
+        db.create_all()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
